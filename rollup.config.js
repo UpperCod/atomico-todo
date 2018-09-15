@@ -6,13 +6,12 @@ import filesize from "rollup-plugin-filesize";
 import pkg from "./package.json";
 import colors from "colors";
 import prepare from "rollup-prepare";
-
-let globals = { atomico: "atomico" };
+import postcss from "rollup-plugin-postcss";
+import cssnano from "cssnano";
 
 export default {
     ...prepare({
-        pkg,
-        globals
+        pkg
     }),
     plugins: plugins(false)
 };
@@ -28,6 +27,9 @@ function plugins(classes = true) {
             include: "node_modules/**"
         }),
         resolve(),
+        postcss({
+            plugins: [cssnano]
+        }),
         buble({
             jsx: "h",
             transforms: {

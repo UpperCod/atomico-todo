@@ -1,4 +1,5 @@
 import { h, Element } from "atomico";
+import style from "./style.css";
 
 export default class extends Element {
     constructor() {
@@ -7,20 +8,6 @@ export default class extends Element {
     }
     static get props() {
         return ["placeholder"];
-    }
-    styled() {
-        return `
-        input{
-            background: rgba(0, 0, 0, 0.003);
-            width: 100%;
-            font-size: 24px;
-            color: inherit;
-            padding: 6px;
-            border: 1px solid #CCC;
-            box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
-            box-sizing: border-box;
-        }
-        `;
     }
     render() {
         return (
@@ -33,7 +20,7 @@ export default class extends Element {
                     event.target.reset();
                 }}
             >
-                <style>{this.styled()}</style>
+                <style>{style}</style>
                 <input
                     name="task"
                     type="text"

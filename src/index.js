@@ -1,7 +1,8 @@
 import { h, Element } from "atomico";
-import TagInput from "./input";
-import TagItem from "./item";
-import item from "./item";
+import TagInput from "./todo-input";
+import TagItem from "./todo-item";
+
+import style from "./style.css";
 
 export const TAG_TODO = "atom-todo";
 export const TAG_ITEM = "atom-todo-item";
@@ -16,23 +17,11 @@ export default class TagTodo extends Element {
             { text: "Learn about Web Components", checked: true }
         ];
     }
-    styled() {
-        return `
-            :host{
-                width : 100%;
-                display:block;
-                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
-            }
-            .group{
-                background : white;
-            }
-        `;
-    }
     render() {
         let { list = [] } = this.state;
         return (
             <div class="group">
-                <style>{this.styled()}</style>
+                <style>{style}</style>
                 <atom-todo-input
                     placeholder="What needs to be done?"
                     create={({ detail }) => {
