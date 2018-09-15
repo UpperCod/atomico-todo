@@ -10,6 +10,6 @@ Como aprendizaje del uso de Atomico lo invito a ver explorar el directorio **/sr
 |atom-todo|	4.15kB|	1.43kB|
 |Total|	7,91kB|	3.06kB|
 
-[![Imagen](static/preview.png)](www.google.cl)
+[![Imagen](static/preview.png)](https://uppercod.github.io/atomico-todo)
 
 
