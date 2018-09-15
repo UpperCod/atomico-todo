@@ -1,8 +1,8 @@
 # atomico-todo
 
-Este es un pequeño ejemplo de un componente generado con [**Atomico**](https://github.com/uppercod/atomico) y empaquetado gracias a [**Rollup**](https://rollupjs.org/guide/en).
+This is a small example of a component generated with [**Atomico**](https://github.com/uppercod/atomico) and packaged thanks to [**Rollup**](https://rollupjs.org/guide/en)
 
-Como aprendizaje del uso de Atomico lo invito a ver explorar el directorio **/src**
+As learning of the use of Atomico i invite you to see explore the directory **/src**.
 
 |File|Min|Gzip|
 |----|---|----|
